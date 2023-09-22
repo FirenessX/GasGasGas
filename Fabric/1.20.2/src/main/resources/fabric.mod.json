@@ -1,29 +1,29 @@
 {
 	"schemaVersion": 1,
-	"id": "gasgasgas",
+	"id": "gasmod",
 	"version": "${version}",
-	"name": "GasGasGas",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Gas Mod",
+	"description": "GAS, GAS, GAS...",
 	"authors": [
-		"Me!"
+		"Coockey, Fireness"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/gasgasgas/icon.png",
+	"license": "LGPL-3.0-only",
+	"icon": "assets/gasmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.gasgasgas.ExampleMod"
+			"net.gasmod.GasMod"
 		],
 		"fabric-datagen": [
-			"com.gasgasgas.ExampleModDataGenerator"
+			"net.gasmod.GasModDataGenerator"
 		]
 	},
 	"mixins": [
-		"gasgasgas.mixins.json"
+		"gasmod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.22",
