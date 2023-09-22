@@ -8,7 +8,6 @@ import org.slf4j.LoggerFactory;
 public class GasMod implements ModInitializer {
 	public static String MOD_ID = "gasmod";
     public static final Logger LOGGER = LoggerFactory.getLogger("gasmod");
-// apipa
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
