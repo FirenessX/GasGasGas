@@ -2,6 +2,7 @@ package net.gasmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.gasmod.effect.ModEffects;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,6 +11,7 @@ public class GasMod implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("gasmod");
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModEffects.registerEffects();
+		ModPotions.registerPotions();
 	}
 }
