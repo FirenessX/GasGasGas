@@ -14,7 +14,7 @@ public class GasGasGasEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(net.minecraft.entity.LivingEntity entity, int amplifier) {
-        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 0, 4, false, false));
+        entity.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 0, 9, false, false));
         entity.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, 0, 0, false, false));
         super.applyUpdateEffect(entity, amplifier);
     }
