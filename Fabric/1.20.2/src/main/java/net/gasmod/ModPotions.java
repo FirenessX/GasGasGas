@@ -9,10 +9,13 @@ import net.minecraft.item.PotionItem;
 import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 
 public class ModPotions {
+    public static RegistryKey<Potion> EMPTY_KEY = RegistryKey.of(RegistryKeys.POTION, new Identifier("empty"));
     public static Potion GAS_GAS_GAS_POTION;
 
     public static Potion registerPotion(String id) {
