@@ -1,6 +1,11 @@
 package net.apipapi.gasmod;
 
 import com.mojang.logging.LogUtils;
+import net.apipapi.gasmod.effect.ModEffects;
+import net.apipapi.gasmod.item.CustomItemGroupIcons;
+import net.apipapi.gasmod.item.ModItemGroups;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -26,6 +31,12 @@ public class Gasmod {
     public Gasmod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModItemGroups.register(modEventBus);
+
+        ModDrink.register(modEventBus);
+
+        ModEffects.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -37,27 +48,9 @@ public class Gasmod {
     private void commonSetup(final FMLCommonSetupEvent event) {
 
     }
-<<<<<<< HEAD
-//ahahahahahahahahahahahahahahahahhaahhahahahaahahahahapidor github blyat yobaniy pravaner ski chi linum tal ova et xuynyan mtacel asenq uxaki kareli er irar uxarkel faylerov GEDORR
-=======
 
->>>>>>> ara
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
-    }
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-    @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-        }
     }
 }
