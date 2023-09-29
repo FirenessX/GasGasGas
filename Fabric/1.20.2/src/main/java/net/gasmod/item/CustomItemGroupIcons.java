@@ -17,8 +17,8 @@ public class CustomItemGroupIcons {
         DefaultedList<ItemStack> icons = DefaultedList.of();
 
         // Добавьте ваше зелье в список иконок
-        ItemStack gasGasGasPotion = PotionUtil.setPotion(new ItemStack(Items.POTION), ModPotions.GAS_GAS_GAS_POTION);
-        icons.add(gasGasGasPotion);
+        ItemStack GasGasGasPotion = PotionUtil.setPotion(new ItemStack(Items.POTION), ModPotions.GAS_GAS_GAS_POTION);
+        icons.add(GasGasGasPotion);
 
         return icons;
     }

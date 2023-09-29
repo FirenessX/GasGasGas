@@ -1,27 +1,32 @@
 package net.gasmod.effect;
 
-import net.gasmod.ModPotions;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.PotionUtil;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.text.Text;
 
 public class GasGasGasEffect extends StatusEffect {
-
 
     protected GasGasGasEffect(StatusEffectCategory category, int color) {
         super(category, color);
     }
 
-    StatusEffectInstance speedEffect = new StatusEffectInstance(StatusEffects.SPEED, 10, 9, false, false);
-    StatusEffectInstance glowingEffect = new StatusEffectInstance(StatusEffects.GLOWING, 10, 0, false, false);
-
     @Override
-    public void applyUpdateEffect(net.minecraft.entity.LivingEntity entity, int amplifier) {
-        entity.addStatusEffect(speedEffect);
-        entity.addStatusEffect(glowingEffect);
+    public void applyUpdateEffect(LivingEntity entity, int amplifier) {
+        StatusEffectInstance effectInstance = entity.getStatusEffect(this);
+        int remainingTime = effectInstance.getDuration();
+        if (remainingTime >= 60) {
+            entity.sendMessage(Text.literal("start"));
+            entity.setGlowing(true);
+        }
+        else {
+            entity.sendMessage(Text.literal("end"));
+            entity.setGlowing(false);
+        }
         super.applyUpdateEffect(entity, amplifier);
     }
 

@@ -19,7 +19,7 @@ public class ModItemGroups {
             new Identifier(GasMod.MOD_ID, "gas_gas_gas"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemgroup.gas_gas_gas"))
-                    .icon(() -> CustomItemGroupIcons.getGroupIcon()) // Вместо CustomItemGroupIcons.getGroupIcons()
+                    .icon(() -> CustomItemGroupIcons.getGroupIcon())
                     .entries((displayContext, entries) -> {
                         addPotionToGroup(entries, ItemGroup.StackVisibility.PARENT_AND_SEARCH_TABS, ModPotions.GAS_GAS_GAS_POTION);
                     }).build());
