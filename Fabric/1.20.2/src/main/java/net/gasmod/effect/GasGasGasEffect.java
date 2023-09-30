@@ -17,16 +17,6 @@ public class GasGasGasEffect extends StatusEffect {
 
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
-        StatusEffectInstance effectInstance = entity.getStatusEffect(this);
-        int remainingTime = effectInstance.getDuration();
-        if (remainingTime >= 60) {
-            entity.sendMessage(Text.literal("start"));
-            entity.setGlowing(true);
-        }
-        else {
-            entity.sendMessage(Text.literal("end"));
-            entity.setGlowing(false);
-        }
         super.applyUpdateEffect(entity, amplifier);
     }
 
