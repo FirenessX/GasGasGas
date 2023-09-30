@@ -13,8 +13,6 @@ public class GasGasGasEffect extends MobEffect {
 
     @Override
     public void applyEffectTick(LivingEntity pLivingEntity, int pAmplifier) {
-        pLivingEntity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 10, 9, false, false, false));
-        pLivingEntity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 10, 0, false, false, false));
         super.applyEffectTick(pLivingEntity, pAmplifier);
     }
 

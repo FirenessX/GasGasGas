@@ -18,7 +18,7 @@ public class ModItemGroups {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Gasmod.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> GAS_TAB = CREATIVE_MODE_TABS.register("gas_gas_gas",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(CustomItemGroupIcons.GAS_GAS_GAS_POTION_ITEM.get()))
+            () -> CreativeModeTab.builder().icon(() -> CustomItemGroupIcons.getGroupIcon())
                     .title(Component.translatable("itemgroup.gas_gas_gas"))
                     .displayItems((p_270258_, p_259752_) -> {
                         addPotionToGroup(p_259752_, CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS, ModDrink.GAS_GAS_GAS_POTION);
